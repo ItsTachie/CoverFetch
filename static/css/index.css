@@ -7,6 +7,14 @@ body {
     text-align: center;
   }
   
+  #slogo{
+    height: 70px;
+    width:auto;
+    top: 0;
+    left: 0;
+    
+    }
+    
   .container {
     margin-top: 500px;
     max-width: 600px;
@@ -68,3 +76,6 @@ body {
     color: #888888;
   }
   
+  .privacy_policy{
+    color: #888888;
+  }

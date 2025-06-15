@@ -22,6 +22,10 @@
         </button>
     </div>
 
+    <div class="attribution">
+        <p>Cover images and metadata provided by <a href="https://open.spotify.com/" class="a-spotify" target="_blank">Spotify</a></p>
+    </div>
+    
     <main class="card-container">
         {% for album in albums %}
             <div class="album">
@@ -43,6 +47,15 @@
         {% endfor %}
     </main>
 
+    <section>
+        <div class="disconnect-block">
+            <p>If you'd like to disconnect your Spotify account, click the button below:</p>
+            <a href="https://www.spotify.com/account/apps/" target="_blank" class="disconnect-button">
+                Disconnect Spotify
+            </a>
+        </div>        
+    </section>
+   
     <footer>
         <p>Made with ❤️ by Tachie</p>
         <br>
@@ -52,6 +65,7 @@
             <a href="https://github.com/ItsTachie" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
+        <a href="{{ url_for('privacy_policy') }}"  class="privacy_policy" target="_blank">Privacy Policy</a>
     </footer>
 
     <script>

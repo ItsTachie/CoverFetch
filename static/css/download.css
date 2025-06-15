@@ -12,6 +12,22 @@
     text-align: center;
   }
 
+#slogo{
+height: 70px;
+width:auto;
+top: 0;
+left: 0;
+
+}
+
+  .a-spotify {
+    color: white;
+  }
+
+  .a-spotify:hover {
+    color: #1ED760;
+  }
+
   header h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
@@ -47,7 +63,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 2px;
   }
 
   .album_name {
@@ -94,7 +110,7 @@
 
   .download-button:hover i{
     cursor: pointer;
-    color: green; 
+    color: #1ED760; 
   }
 
   
@@ -137,8 +153,8 @@
 
 .bulk-download-button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1ED760;;
+    color: black;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
@@ -147,5 +163,41 @@
 }
 
 .bulk-download-button:hover {
-    background-color: #45a049;
+    background-color: #0e8437;
+    color: white;
+}
+
+.disconnect-block {
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.disconnect-button {
+  display: inline-block;
+  background-color: #1ED760;;
+  color: black;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.disconnect-button:hover {
+  background-color: #0e8437;
+  color: white;
+}
+
+.privacy_policy{
+  color: white;
+}
+
+footer p{
+  color: #888888;
+}
+
+.privacy_policy {
+  color: #888888;
 }
