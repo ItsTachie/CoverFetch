@@ -1,0 +1,31 @@
+{%extends "bse.html"%}
+
+{%block style%} 
+  <link rel="stylesheet" href="/css/index.css">
+{%endblock%}
+
+{%block content%} 
+  <div class="container">
+      <header>
+        <h1>🎵 Spotify Album Art Downloader</h1>
+        <p>Turn your music taste into a visual collection.</p>
+      </header>
+
+      <section class="features">
+        <h2>Why You'll Love It</h2>
+        <ul>
+          <li>🎨 Download high-quality album covers from your saved music</li>
+          <li>⚡ One-click login with Spotify</li>
+          <li>📁 Export your collection for design, archiving, or sharing</li>
+        </ul>
+      </section>
+
+      <section class="cta">
+        <a href="/login" class="login-btn">Log in with Spotify</a>
+      </section>
+
+      <footer>
+        <p>Made with ❤️ using Flask & Spotify API</p>
+      </footer>
+  </div>
+{%endblock%}
