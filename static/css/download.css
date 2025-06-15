@@ -26,7 +26,6 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
   .album {
@@ -35,8 +34,7 @@
     background-color: #bbbbbb;
     min-width: 250px;
     min-height: 300px;
-   
-
+    transition: transform .2s;
   }
 
   .album_img{
@@ -68,15 +66,35 @@
     margin: 5px;
     text-align: left;
     color: black;
-    width: 100%;
+    width: 95%;
     height: 37.5%;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .album_info p {
+    width: 250px;
   }
 
   .download_link{
     font-size: 25px;
     align-self: center;
     justify-self: center;
+    margin-bottom: 20px ;
+  }
+
+.download-button{
+  background-color: #bbbbbb;
+  border: none;
+}
+
+.album:hover{
+  transform: scale(1.1);
+}
+
+  .download-button:hover i{
+    cursor: pointer;
+    color: green; 
   }
 
   
@@ -88,13 +106,9 @@
 
   i {
     color: black;
+    font-size: large;
+    transition: .5s;
   }
-
-  i:hover {
-    color: green;
-  }
-
-
 
   footer {
     margin-top: 4em;
@@ -103,10 +117,6 @@
     color: #888888;
   }
   
-  .links p{
-
-  }
-
   .links{
     display: flex;
     justify-content: center;
@@ -119,3 +129,23 @@
     font-size: 25px;
     margin-bottom: 5px;
   }
+
+  .bulk-download {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bulk-download-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bulk-download-button:hover {
+    background-color: #45a049;
+}
