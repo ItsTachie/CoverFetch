@@ -25,12 +25,9 @@ def redirect_page():
         return "Authorization failed: No code provided.", 400
 
     # Get the access token
-    token_info = sp_oauth.get_access_token(code)
+    token_info = sp_oauth.get_cached_token()
     if not token_info:
-        return "Failed to retrieve access token.", 400
-
-    # Get the user's Spotify ID
-    sp = spotipy.Spotify(auth=token_info["access_token"])
+        token_info = sp_oauth.get_access_token(code)
 
     # Store the token info with a unique key
     session['token_info'] = token_info
@@ -44,8 +41,8 @@ def getImages():
     except Exception as e:
         print(f"Error: {e}")
         return redirect(url_for("login", _external=True))
-
-    sp = spotipy.Spotify(auth=token_info["access_token"])
+    access_token = token_info if isinstance(token_info, str) else token_info['access_token']
+    sp = spotipy.Spotify(auth=access_token)
 
     #list of dictionaries of album info
     albums = []
