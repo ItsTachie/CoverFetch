@@ -13,7 +13,7 @@ SCOPE = 'user-library-read'
 
 def create_spotify_oauth():
     redirect_uri = url_for("redirect_page", _external=True)
-    return SpotifyOAuth(
+    auth = SpotifyOAuth(
         client_id=CLIENT_ID,
         client_secret=CLIENT_SECRET,
         redirect_uri=redirect_uri,
@@ -21,8 +21,7 @@ def create_spotify_oauth():
         cache_path=None,
         show_dialog=True
     )
-
-
+    return auth
 
 def get_token():
     # Retrieve the token info using the user's ID
