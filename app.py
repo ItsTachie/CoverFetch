@@ -25,9 +25,7 @@ def redirect_page():
         return "Authorization failed: No code provided.", 400
 
     # Get the access token
-    token_info = sp_oauth.get_cached_token()
-    if not token_info:
-        token_info = sp_oauth.get_access_token(code)
+    token_info = sp_oauth.get_access_token(code)
 
     # Store the token info with a unique key
     session['token_info'] = token_info
