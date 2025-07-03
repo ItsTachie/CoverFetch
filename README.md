@@ -10,7 +10,7 @@
 Due to Spotify’s developer guidelines, this app is currently in development mode and not public-facing.
 This means only whitelisted Spotify accounts can actually use the hosted version above.
 
-If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials [Usage](#usage).
+If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials.
 
  ---
 
@@ -62,11 +62,11 @@ Users can:
    * Set your redirect URI to `http://localhost:5000/redirect`.
    * Add your **Client ID** and **Client Secret** to a `.env` file:
 
-
+   ```bash
     CLIENT_ID={your spotify client id here}
     CLIENT_SECRET={your spotify client secret here}
     REDIRECT_URI=http://localhost:5000/redirect
-
+   ```
 
 4. **Run the application**
 
