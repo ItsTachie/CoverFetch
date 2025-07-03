@@ -62,11 +62,11 @@ Users can:
    * Set your redirect URI to `http://localhost:5000/redirect`.
    * Add your **Client ID** and **Client Secret** to a `.env` file:
 
-     ```
+
     CLIENT_ID={your spotify client id here}
     CLIENT_SECRET={your spotify client secret here}
     REDIRECT_URI=http://localhost:5000/redirect
-     ```
+
 
 4. **Run the application**
 
