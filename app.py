@@ -67,5 +67,5 @@ def getImages():
     return render_template('download.html', albums=albums)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5000, host='0.0.0.0')
 
