@@ -1,47 +1,48 @@
-# 🎵 CoverFetch
+# CoverFetch
 
 **CoverFetch** is a simple web application that allows users to view and download the cover art of their saved albums on Spotify.
 
-## 🔗 Live Demo
+## Live Demo
 
 👉[CoverFetch](https://coverfetch.onrender.com/)
 
-⚠️ Note:
-Due to Spotify’s developer guidelines, this app is currently in development mode and not public-facing.
-This means only whitelisted Spotify accounts can actually use the hosted version above.
-
-If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials [Usage](#usage).
+Important Note on Access:
+> Due to Spotify’s updated Developer Policy (May 2025), this application is restricted to Development Mode. Spotify has significantly tightened the requirements for moving an app to "Extended Quota Mode" (Public Mode)
+> If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials.
 
  ---
 
 Users can:
+
 - View all their saved albums in a clean grid layout.
 - Download individual album covers as JPG files.
 - Bulk download all album covers as a single ZIP file.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Spotify OAuth Login
-- 🎨 Display of saved albums with cover images, titles, and artists
-- ⬇️ Individual image download (JPG format)
-- 📦 Bulk download all covers as a single ZIP
-- ❤️ Clean, mobile-friendly UI
+- Spotify OAuth Login
+- Display of saved albums with cover images, titles, and artists
+- Individual image download (JPG format)
+- Bulk download all covers as a single ZIP
+- Clean, mobile-friendly UI
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Flask (Python)
 - **Frontend:** HTML, CSS, JavaScript
 - **API:** Spotify Web API
+- **Deployment** Render
 
 ---
 
-## 🧰 Usage
+## Usage
 
 1. **Clone this repository**
+
 - create a folder and navigate to it in a terminal
 - enter the following commands
 
@@ -57,14 +58,13 @@ Users can:
    ```
 
 3. **Set up your Spotify Developer credentials**
+   - Register an app on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
+   - Set your redirect URI to `http://localhost:5000/redirect`.
+   - Add your **Client ID** and **Client Secret** to the `.env` file:
 
-   * Register an app on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
-   * Set your redirect URI to `http://localhost:5000/redirect`.
-   * Add your **Client ID** and **Client Secret** to a `.env` file:
-
-     ```
-    CLIENT_ID={your spotify client id here}
-    CLIENT_SECRET={your spotify client secret here}
+     ```bash
+    CLIENT_ID=YOUR_CLIENT_ID_HERE
+    CLIENT_SECRET=YOUR_CLIENT_SECRET_HERE
     REDIRECT_URI=http://localhost:5000/redirect
      ```
 
@@ -75,16 +75,28 @@ Users can:
    ```
 
 5. **Log in with your Spotify account**
-   * Open your browser to `http://localhost:5000`.
-   * Log in via Spotify and authorize the app.
-   * Browse and download your saved album covers!
+   - Open your browser to `http://localhost:5000`.
+   - Log in via Spotify and authorize the app.
+   - Browse and download your saved album covers!
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
-![grid](./screenshots/landingPage.png) 
-![downloads](./screenshots/albumGrid.png) 
+![grid](./screenshots/landingPage.png)
+![downloads](./screenshots/albumGrid.png)
 
 ---
 
+## Motivation
+
+CoverFetch wasn't built in a vacuum. It was born out of a technical hurdle I faced while building [TapVinyl](https://github.com/ItsTachie/TapVinyl).
+
+TapVinyl uses an RFID reader to scan physical album covers embedded with NFC tags. I needed high-quality, consistent digital copies of my entire Spotify library's artwork to print and mount.
+
+I built CoverFetch to:
+
+1. Automate the retrieval of high-resolution artwork directly from my "Saved Albums."
+2. Bulk Download my entire collection into a single .zip file, ready for the printer.
+
+---
