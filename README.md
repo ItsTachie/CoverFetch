@@ -62,7 +62,7 @@ Users can:
    - Set your redirect URI to `http://localhost:5000/redirect`.
    - Add your **Client ID** and **Client Secret** to the `.env` file:
 
-     ```bash
+   ```bash
     CLIENT_ID=YOUR_CLIENT_ID_HERE
     CLIENT_SECRET=YOUR_CLIENT_SECRET_HERE
     REDIRECT_URI=http://localhost:5000/redirect
