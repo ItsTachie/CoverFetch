@@ -6,9 +6,17 @@
 
 👉[CoverFetch](https://coverfetch.onrender.com/)
 
+<<<<<<< HEAD
 Important Note on Access:
 > Due to Spotify’s updated Developer Policy (May 2025), this application is restricted to Development Mode. Spotify has significantly tightened the requirements for moving an app to "Extended Quota Mode" (Public Mode)
 > If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials.
+=======
+⚠️ Note:
+Due to Spotify’s developer guidelines, this app is currently in development mode and not public-facing.
+This means only whitelisted Spotify accounts can actually use the hosted version above.
+
+If you’d like to use it yourself, you can clone the repository and run it locally with your own Spotify developer credentials.
+>>>>>>> 8057bbef2ca63482c39c35f68d0f3144be02a092
 
  ---
 
@@ -66,7 +74,7 @@ Users can:
     CLIENT_ID=YOUR_CLIENT_ID_HERE
     CLIENT_SECRET=YOUR_CLIENT_SECRET_HERE
     REDIRECT_URI=http://localhost:5000/redirect
-     ```
+   ```
 
 4. **Run the application**
 
